@@ -69,8 +69,13 @@ if(EMC_EXEC_DIR)
   set(exec_dir exec)
 endif()
 
+# Turn on testing.
+enable_testing()
+include(CTest)
+
 add_subdirectory(sorc)
 add_subdirectory(parm)
+add_subdirectory(tests)
 
 # If desired, build the doxygen docs.
 if(ENABLE_DOCS)
